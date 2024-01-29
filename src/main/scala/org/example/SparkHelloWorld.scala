@@ -6,7 +6,7 @@ import org.apache.spark.sql.{Row, SparkSession}
 object SparkHelloWorld {
   def main(args: Array[String]): Unit = {
     val spark = SparkSession.builder
-      .appName("SparkHelloWorld")
+      .appName("Test Mavon Hello")
       .master("local[*]")
       .getOrCreate()
 
@@ -17,9 +17,9 @@ object SparkHelloWorld {
     ))
 
     val data = Seq(
-      Row("Alice RamBABU", 25),
-      Row("Bob Mohan", 30),
-      Row("Charlie Krishna", 22)
+      Row("Alice RamBABU", 45),
+      Row("Bob Mohan", 54),
+      Row("Charlie Krishna", 32)
     )
 
     val df = spark.createDataFrame(spark.sparkContext.parallelize(data), schema)
