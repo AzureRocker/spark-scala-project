@@ -17,9 +17,9 @@ object SparkHelloWorld {
     ))
 
     val data = Seq(
-      Row("Alice", 25),
-      Row("Bob", 30),
-      Row("Charlie", 22)
+      Row("Alice RamBABU", 25),
+      Row("Bob Mohan", 30),
+      Row("Charlie Krishna", 22)
     )
 
     val df = spark.createDataFrame(spark.sparkContext.parallelize(data), schema)
